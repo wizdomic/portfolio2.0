@@ -1,0 +1,111 @@
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 52px 100px;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.label {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+.title em {
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--accent);
+}
+
+.bio {
+  font-size: 0.78rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.bio strong { color: var(--text); font-weight: 500; }
+
+/* Right column */
+.right { display: flex; flex-direction: column; gap: 0; }
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+.factLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 100px;
+}
+.factValue {
+  font-size: 0.78rem;
+  color: var(--text);
+  text-align: right;
+}
+
+/* Terminal block */
+.terminalBlock {
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.terminalBar {
+  background: var(--surface);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.terminalBar span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+}
+.terminalBar p {
+  font-size: 0.62rem;
+  color: var(--muted);
+  margin-left: 8px;
+  letter-spacing: 0.08em;
+}
+.terminalBody {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+.prompt { color: var(--accent); margin-right: 8px; }
+.output { color: var(--muted); padding-left: 18px; }
+.blink { animation: blink 0.9s infinite; color: var(--accent); }
+
+@media (max-width: 768px) {
+  .section { padding: 60px 24px 80px; }
+  .inner { grid-template-columns: 1fr; gap: 40px; }
+}
