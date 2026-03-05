@@ -72,7 +72,7 @@ export default function Hero() {
         <div className={styles.stats}>
           {[
             // { n: '3+', label: 'Years building' },
-            { n: '20+', label: 'Tech stack' },
+            { n: '17+', label: 'Tech stack' },
             { n: '∞', label: 'Curiosity' },
             { n: '10+', label: 'Projects' },
           ].map(({ n, label }) => (
